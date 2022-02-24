@@ -43,10 +43,10 @@
 ### Big O Notation
 
 notation | name | complexity class | algorithm
-:---: | :---: | :---: | :---:
-O(1) | constant || in-place
+:--- | :--- | :--- | :---
+O(1) | constant | | in-place
 O(log n) | logarithmic
-O(n) | linear || one-pass, n-pass
+O(n) | linear | | one-pass, n-pass
 O(n log n) | log-linear
 O(n<sup>2</sup>) | quadratic
 O(n<sup>c</sup>) | polynomial | **P**
@@ -104,8 +104,8 @@ See also:
 #### Binary Numbers and Base-2
 
 decimal (base-10) | binary (base-2) | powers | octal (base-8) | hexadecimal (base-16)
-:---: | :---: | :---: | :---: | :---:
-0 | 0000 0000 || 0 | 00
+:--- | :--- | :--- | :--- | :---
+0 | 0000 0000 | | 0 | 00
 1 | 0000 0001 | 2<sup>0</sup> | 1 | 01
 2 | 0000 0010 | 2<sup>1</sup> | 2 | 02
 3 | 0000 0011 | 2<sup>1</sup> + 2<sup>0</sup> | 3 | 03
@@ -154,7 +154,7 @@ Convert binary to octal by dividing the binary number into three-bit groups (sta
 #### Negative Numbers and Two's Complement
 
 decimal | binary | interpretation
-:---: | :---: | :---:
+:--- | :--- | :---
 −5 | 1011 | -8 + 2 + 1
 −4 | 1100 | -8 + 4
 −3 | 1101 | -8 + 4 + 1
@@ -326,16 +326,16 @@ If a number is encoded using [two's complement](#negative-numbers-and-twos-compl
 - **boolean**: has only two possible values: true and false
 - **char**: a single 16-bit Unicode character
 
-category | Java type | native type | size | range | exponent
-:---: | :---: | :---: | :---: | :---: | :---:
-integral | byte | jbyte | 8-bit signed | -128 to 127 | -2<sup>7</sup> to 2<sup>7</sup> - 1
-integral | short | jshort | 16-bit signed | -32,768 to 32,767 | -2<sup>15</sup> to 2<sup>15</sup> - 1
-integral | int | jint | 32-bit signed | -2,147,483,648 to 2,147,483,647 | -2<sup>31</sup> to 2<sup>31</sup> - 1
-integral | long | jlong | 64-bit signed | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | -2<sup>63</sup> to 2<sup>63</sup> - 1
-integral | char | jchar | 16-bit | ```'\u0000'``` to ```'\uffff'```
-floating-point | float | jfloat | 32-bit | 32-bit IEEE 754 floating-point numbers
-floating-point | double | jdouble | 64-bit | 64-bit IEEE 754 floating-point numbers
-other | boolean | jboolean | N/A  | ```true``` and ```false```
+Java type | size | range | exponent
+:--- | :--- | :--- | :---
+byte | 8-bit signed | -128 to 127 | -2<sup>7</sup> to 2<sup>7</sup> - 1
+short | 16-bit signed | -32,768 to 32,767 | -2<sup>15</sup> to 2<sup>15</sup> - 1
+int | 32-bit signed | -2,147,483,648 to 2,147,483,647 | -2<sup>31</sup> to 2<sup>31</sup> - 1
+long | 64-bit signed | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | -2<sup>63</sup> to 2<sup>63</sup> - 1
+char | 16-bit | ```'\u0000'``` to ```'\uffff'```
+float | 32-bit | 32-bit IEEE 754 floating-point numbers
+double | 64-bit | 64-bit IEEE 754 floating-point numbers
+boolean | N/A  | ```true``` and ```false```
 
 See also:
 - [Common integral data types](https://en.wikipedia.org/wiki/Integer_(computer_science)#Common_integral_data_types)
@@ -463,7 +463,7 @@ See also:
 ### Open Systems Interconnection (OSI) Reference Model
 
 layer \# | layer name | data unit | protocol examples | Internet layer
-:---: | :---: | :---: | :---: | :---:
+:--- | :--- | :--- | :--- | :---
 7 | application | data | FTP, HTTP | application
 6 | presentation | data | ASCII, MPEG | application
 5 | session | data | named pipes, sockets | application
@@ -484,7 +484,7 @@ See also:
 ### Data Units
 
 name | symbol | size | bit rate
-:---: | :---: | :---: | :---:
+:--- | :--- | :--- | :---
 bit | ```b``` | 0 or 1 | ```bit/s```
 byte | ```B``` | 8 bits | ```B/s```
 kilobyte | ```KB``` | 1024 bytes | ```kb/s```
@@ -502,15 +502,15 @@ See also:
 ### Latencies
 
 description | nanoseconds | microseconds | milliseconds | notes
-:---: | :---: | :---: | :---: | :---:
+:--- | :--- | :--- | :--- | :---
 L1 cache reference | 0.5 ns
 branch mispredict | 5 ns
-L2 cache reference | 7 ns ||| 14x L1 cache
+L2 cache reference | 7 ns | | | 14x L1 cache
 mutex lock/unlock | 25 ns
-main memory reference | 100 ns ||| 20x L2 cache, 200x L1 cache
+main memory reference | 100 ns | | | 20x L2 cache, 200x L1 cache
 compress 1K w/cheap compression algorithm | 3,000 ns
 send 2K bytes over 1 Gbps network | 20,000 ns | 20 us
-read 4K randomly from SSD | 150,000 ns | 150 us || ~1GB/sec SSD
+read 4K randomly from SSD | 150,000 ns | 150 us | | ~1GB/sec SSD
 read 1 MB sequentially from memory | 250,000 ns | 250 us
 round trip within same data center | 500,000 ns | 500 us
 read 1 MB sequentially from SSD | 1,000,000 ns | 1,000 us | 1 ms | ~1GB/sec SSD, 4x memory
@@ -530,7 +530,7 @@ See also:
 ### Powers of Two
 
 base 2 | bit size | binary value | description
-:---: | :---: | :---: | :---:
+:--- | :--- | :--- | :---
 2<sup>0</sup> | 1
 2<sup>1</sup> | 2 | ```1b```
 2<sup>2</sup> | 4
@@ -538,19 +538,19 @@ base 2 | bit size | binary value | description
 2<sup>4</sup> | 16
 2<sup>5</sup> | 32
 2<sup>6</sup> | 64
-2<sup>7</sup> | 128 || signed byte
+2<sup>7</sup> | 128 | | signed byte
 2<sup>8</sup> | 256 | ```1B``` | unsigned byte
 2<sup>9</sup> | 512
 2<sup>10</sup> | 1024 | ```1KB```
-2<sup>15</sup> | 32,768 || 16-bit word, signed short
-2<sup>16</sup> | 65,536 || 16-bit word, unsigned short, char
+2<sup>15</sup> | 32,768 | | 16-bit word, signed short
+2<sup>16</sup> | 65,536 | | 16-bit word, unsigned short, char
 2<sup>20</sup> | 1,048,576 | ```1MB```
 2<sup>30</sup> | 1,073,741,824 | ```1GB```
-2<sup>31</sup> | 2,147,483,648 || 32-bit word, signed int
-2<sup>32</sup> | 4,294,967,296 || 32-bit word, unsigned int, float
+2<sup>31</sup> | 2,147,483,648 | | 32-bit word, signed int
+2<sup>32</sup> | 4,294,967,296 | | 32-bit word, unsigned int, float
 2<sup>40</sup> | 1,099,511,627,776 | ```1TB```
-2<sup>63</sup> | 9,223,372,036,854,775,808 || 64-bit word, signed long
-2<sup>64</sup> | 18,446,744,073,709,551,616 || 64-bit word, unsigned long, double
+2<sup>63</sup> | 9,223,372,036,854,775,808 | | 64-bit word, signed long
+2<sup>64</sup> | 18,446,744,073,709,551,616 | | 64-bit word, unsigned long, double
 
 See also:
 - [Common integral data types](https://en.wikipedia.org/wiki/Integer_(computer_science)#Common_integral_data_types)
@@ -589,7 +589,7 @@ Each HTTP verb:
 - is cacheable or not
 
 verb | meaning | idempotent | safe | cacheable
-:---: | :---: | :---: | :---: | :---:
+:--- | :--- | :--- | :--- | :---
 GET | reads a resource | yes | yes | yes
 POST | creates a resource or triggers a data-handling process | no | no | only cacheable if response contains explicit freshness information
 PUT | fully updates (replaces) an existing resource or creates a resource | yes | no | no
