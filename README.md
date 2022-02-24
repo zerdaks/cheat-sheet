@@ -44,21 +44,21 @@
 
 notation | name | complexity class | algorithm
 :---: | :---: | :---: | :---:
-$O(1)$ | constant || in-place
-$O(log n)$ | logarithmic
-$O(n)$ | linear || one-pass, n-pass
-$O(n log n)$ | log-linear
-$O(n^2)$ | quadratic
-$O(n^c)$ | polynomial | **P**
-$O(c^n)$ | exponential (with linear exponent) | **E**
-$O(c^{poly(n)})$ | exponential | **EXPSPACE**/**EXPTIME**
-$O(n!)$ | factorial
+O(1) | constant || in-place
+O(log n) | logarithmic
+O(n) | linear || one-pass, n-pass
+O(n log n) | log-linear
+O(n<sup>2</sup>) | quadratic
+O(n<sup>c</sup>) | polynomial | **P**
+O(c<sup>n</sup>) | exponential (with linear exponent) | **E**
+O(c<sup>poly(n)</sup>) | exponential | **EXPSPACE**/**EXPTIME**
+O(n!) | factorial
 
-- all pairs: $n^2$
-- all triples: $n^3$
-- all subsets of set n: $2^n$
-- all $k$ combinations of set n (n choose k): ${n \choose k} = n!/(k!(n-k)!)$
-- all permutations: $n!$
+- all pairs: n<sup>2</sup>
+- all triples: n<sup>3</sup>
+- all subsets of set n: 2<sup>n</sup>
+- all k combinations of set n (n choose k): <img src="https://render.githubusercontent.com/render/math?math={n \choose k} = n!/(k!(n-k)!)">
+- all permutations: n!
 
 See also:
 - [Big-O Cheat Sheet](http://bigocheatsheet.com/)
@@ -69,24 +69,20 @@ See also:
 
 The logarithm for a base *b* and a number *x* is defined to be the inverse function of taking *b* to the power *x*. For any *x* and *b*:
 
-$$
-log_b(x) = y \iff b^y = x
-$$
+<img src="https://render.githubusercontent.com/render/math?math=log_b(x) = y \iff b^y = x">
 
 For example:
 
-$$
-log_2 64 = 6 \iff 2^6 = 64
-$$
+<img src="https://render.githubusercontent.com/render/math?math=log_2(64) = 6 \iff 2^6 = 64">
 
 ### NP-completeness
 
 - The class **P** consists of problems that are solvable in polynomial time.
 - The class **NP** consists of problems that are *verifiable* in polynomial time.
 - Any problem in **P** is also in **NP**. And any problem in **NP** is also in **EXPTIME**. More formally:
-  - $P \subseteq NP \subseteq PSPACE \subseteq EXPTIME \subseteq NEXPTIME \subseteq EXPSPACE$
-  - $P \subsetneq EXPTIME$
-  - $NP \subsetneq NEXPTIME$
+  - <img src="https://render.githubusercontent.com/render/math?math=P \subseteq NP \subseteq PSPACE \subseteq EXPTIME \subseteq NEXPTIME \subseteq EXPSPACE">
+  - <img src="https://render.githubusercontent.com/render/math?math=P \subsetneq EXPTIME">
+  - <img src="https://render.githubusercontent.com/render/math?math=NP \subsetneq NEXPTIME">
 - A problem is in class **NPC** (and is referred to as being **NP-complete**) if it is in **NP** and is as *hard* as any problem in **NP**.
 - If any **NP-complete** problem can be solved in polynomial time, then every problem in **NP** can be solved in polynomial time.
 
@@ -97,9 +93,9 @@ See also:
 
 ### Reductions
 
-- Given an instance $\alpha$ of problem *A*, use a polynomial-time **reduction algorithm** to transform it to an instance $\beta$ of problem *B*.
-- Run the polynomial-time decision algorithm for *B* on the instance $\beta$.
-- Use the answer for $\alpha$ as the answer for $\beta$.
+- Given an instance &alpha; of problem *A*, use a polynomial-time **reduction algorithm** to transform it to an instance &beta; of problem *B*.
+- Run the polynomial-time decision algorithm for *B* on the instance &beta;.
+- Use the answer for &alpha; as the answer for &beta;.
 
 ## Bit Manipulation
 
@@ -110,50 +106,50 @@ See also:
 decimal (base-10) | binary (base-2) | powers | octal (base-8) | hexadecimal (base-16)
 :---: | :---: | :---: | :---: | :---:
 0 | 0000 0000 || 0 | 00
-1 | 0000 0001 | $2^0$ | 1 | 01
-2 | 0000 0010 | $2^1$ | 2 | 02
-3 | 0000 0011 | $2^1 + 2^0$ | 3 | 03
-4 | 0000 0100 | $2^2$ | 4 | 04
-5 | 0000 0101 | $2^2 + 2^0$ | 5 | 05
-6 | 0000 0110 | $2^2 + 2^1$ | 6 | 06
-7 | 0000 0111 | $2^2 + 2^1 + 2^0$ | 7 | 07
-8 | 0000 1000 | $2^3$ | 8 | 08
-9 | 0000 1001 | $2^3 + 2^0$ | 10 | 09
-10 | 0000 1010 | $2^3 + 2^1$ | 11 | 0A
-11 | 0000 1011 || 12 | 0B
-12 | 0000 1100 || 13 | 0C
-13 | 0000 1101 || 14 | 0D
-14 | 0000 1110 || 15 | 0E
-15 | 0000 1111 || 16 | 0F
-16 | 0001 0000 || 20 | 10
-17 | 0001 0001 || 21 | 11
-18 | 0001 0010 || 22 | 12
-19 | 0001 0011 || 23 | 13
-20 | 0001 0100 || 24 | 14
+1 | 0000 0001 | 2<sup>0</sup> | 1 | 01
+2 | 0000 0010 | 2<sup>1</sup> | 2 | 02
+3 | 0000 0011 | 2<sup>1</sup> + 2<sup>0</sup> | 3 | 03
+4 | 0000 0100 | 2<sup>2</sup> | 4 | 04
+5 | 0000 0101 | 2<sup>2</sup> + 2<sup>0</sup> | 5 | 05
+6 | 0000 0110 | 2<sup>2</sup> + 2<sup>1</sup> | 6 | 06
+7 | 0000 0111 | 2<sup>2</sup> + 2<sup>1</sup> + 2<sup>0</sup> | 7 | 07
+8 | 0000 1000 | 2<sup>3</sup> | 8 | 08
+9 | 0000 1001 | 2<sup>3</sup> + 2<sup>0</sup> | 10 | 09
+10 | 0000 1010 | 2<sup>3</sup> + 2<sup>1</sup> | 11 | 0A
+11 | 0000 1011 | | 12 | 0B
+12 | 0000 1100 | | 13 | 0C
+13 | 0000 1101 | | 14 | 0D
+14 | 0000 1110 | | 15 | 0E
+15 | 0000 1111 | | 16 | 0F
+16 | 0001 0000 | | 20 | 10
+17 | 0001 0001 | | 21 | 11
+18 | 0001 0010 | | 22 | 12
+19 | 0001 0011 | | 23 | 13
+20 | 0001 0100 | | 24 | 14
 
 #### Binary to Hexadecimal
 
 Convert hexadecimal to binary by replacing each hexadecimal digit with its equivalent four-bit group in binary:
 
-- $58_{10} = 3A_{16} = (0011\ 1010)_{2}$
-- $231_{10} = E7_{16} = (1110\ 0111)_{2}$
+- <img src="https://render.githubusercontent.com/render/math?math=58_{10} = 3A_{16} = (0011\ 1010)_{2}">
+- <img src="https://render.githubusercontent.com/render/math?math=231_{10} = E7_{16} = (1110\ 0111)_{2}">
 
 Convert binary to hexadecimal by dividing the binary number into four-bit groups (starting at the radix point) and replacing each group with its equivalent hexadecimal digit:
 
-- $82_{10} = (0101\ 0010)_{2} = 52_{16}$
-- $221_{10} = (1101\ 1101)_{2} = DD_{16}$
+- <img src="https://render.githubusercontent.com/render/math?math=82_{10} = (0101\ 0010)_{2} = 52_{16}">
+- <img src="https://render.githubusercontent.com/render/math?math=221_{10} = (1101\ 1101)_{2} = DD_{16}">
 
 #### Binary to Octal
 
 Convert octal to binary by replacing each octal digit with its equivalent three-bit group in binary:
 
-- $58_{10} = 72_{8} = (111\ 010)_{2}$
-- $231_{10} = 347_{8} = (011\ 100\ 111)_{2}$
+- <img src="https://render.githubusercontent.com/render/math?math=58_{10} = 72_{8} = (111\ 010)_{2}">
+- <img src="https://render.githubusercontent.com/render/math?math=231_{10} = 347_{8} = (011\ 100\ 111)_{2}">
 
 Convert binary to octal by dividing the binary number into three-bit groups (starting at the radix point) and replacing each group with its equivalent octal digit:
 
-- $82_{10} = (001\ 010\ 010)_{2} = 122_{8}$
-- $221_{10} = (011\ 011\ 101)_{2} = 335_{8}$
+- <img src="https://render.githubusercontent.com/render/math?math=82_{10} = (001\ 010\ 010)_{2} = 122_{8}">
+- <img src="https://render.githubusercontent.com/render/math?math=221_{10} = (011\ 011\ 101)_{2} = 335_{8}">
 
 #### Negative Numbers and Two's Complement
 
@@ -332,10 +328,10 @@ If a number is encoded using [two's complement](#negative-numbers-and-twos-compl
 
 category | Java type | native type | size | range | exponent
 :---: | :---: | :---: | :---: | :---: | :---:
-integral | byte | jbyte | 8-bit signed | -128 to 127 | $−(2^7)$ to $2^7 − 1$
-integral | short | jshort | 16-bit signed | -32,768 to 32,767 | $−(2^{15})$ to $2^{15} − 1$ |
-integral | int | jint | 32-bit signed | -2,147,483,648 to 2,147,483,647 | $−(2^{31})$ to $2^{31} − 1$
-integral | long | jlong | 64-bit signed | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | $−(2^{63})$ to $2^{63} − 1$
+integral | byte | jbyte | 8-bit signed | -128 to 127 | -2<sup>7</sup> to 2<sup>7</sup> - 1
+integral | short | jshort | 16-bit signed | -32,768 to 32,767 | -2<sup>15</sup> to 2<sup>15</sup> - 1
+integral | int | jint | 32-bit signed | -2,147,483,648 to 2,147,483,647 | -2<sup>31</sup> to 2<sup>31</sup> - 1
+integral | long | jlong | 64-bit signed | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | -2<sup>63</sup> to 2<sup>63</sup> - 1
 integral | char | jchar | 16-bit | ```'\u0000'``` to ```'\uffff'```
 floating-point | float | jfloat | 32-bit | 32-bit IEEE 754 floating-point numbers
 floating-point | double | jdouble | 64-bit | 64-bit IEEE 754 floating-point numbers
@@ -353,7 +349,7 @@ See also:
 
 Java supports arrays of arrays (with order that can be considered **row-major**) rather than multidimensional arrays.
 
-Arrays must be indexed by ```int```, ```short```, ```byte```, or ```char``` values. The size of an array cannot exceed $2^{31} − 1$ elements.
+Arrays must be indexed by ```int```, ```short```, ```byte```, or ```char``` values. The size of an array cannot exceed 2<sup>31</sup> - 1 elements.
 
 ### Java Class Library (JCL) Performance
 
@@ -523,9 +519,9 @@ read 1 MB sequentially from disk | 20,000,000 ns | 20,000 us | 20 ms | 20x SSD, 
 send packet CA->Netherlands->CA | 150,000,000 ns | 150,000 us | 150 ms
 
 Notes:
-- 1 ns = $10^{-9}$ seconds
-- 1 us = $10^{-6}$ seconds = 1,000 ns
-- 1 ms = $10^{-3}$ seconds = 1,000 us = 1,000,000 ns
+- 1 ns = 10<sup>-9</sup> seconds
+- 1 us = 10<sup>-6</sup> seconds = 1,000 ns
+- 1 ms = 10<sup>-3</sup> seconds = 1,000 us = 1,000,000 ns
 
 See also:
 - [Building Software Systems at Google and Lessons Learned](https://static.googleusercontent.com/media/research.google.com/en//people/jeff/Stanford-DL-Nov-2010.pdf)
@@ -535,26 +531,26 @@ See also:
 
 base 2 | bit size | binary value | description
 :---: | :---: | :---: | :---:
-$2^0$ | 1
-$2^1$ | 2 | ```1b```
-$2^2$ | 4
-$2^3$ | 8
-$2^4$ | 16
-$2^5$ | 32
-$2^6$ | 64
-$2^7$ | 128 || signed byte
-$2^8$ | 256 | ```1B``` | unsigned byte
-$2^9$ | 512
-$2^{10}$ | 1024 | ```1KB```
-$2^{15}$ | 32,768 || 16-bit word, signed short
-$2^{16}$ | 65,536 || 16-bit word, unsigned short, char
-$2^{20}$ | 1,048,576 | ```1MB```
-$2^{30}$ | 1,073,741,824 | ```1GB```
-$2^{31}$ | 2,147,483,648 || 32-bit word, signed int
-$2^{32}$ | 4,294,967,296 || 32-bit word, unsigned int, float
-$2^{40}$ | 1,099,511,627,776 | ```1TB```
-$2^{63}$ | 9,223,372,036,854,775,808 || 64-bit word, signed long
-$2^{64}$ | 18,446,744,073,709,551,616 || 64-bit word, unsigned long, double
+2<sup>0</sup> | 1
+2<sup>1</sup> | 2 | ```1b```
+2<sup>2</sup> | 4
+2<sup>3</sup> | 8
+2<sup>4</sup> | 16
+2<sup>5</sup> | 32
+2<sup>6</sup> | 64
+2<sup>7</sup> | 128 || signed byte
+2<sup>8</sup> | 256 | ```1B``` | unsigned byte
+2<sup>9</sup> | 512
+2<sup>10</sup> | 1024 | ```1KB```
+2<sup>15</sup> | 32,768 || 16-bit word, signed short
+2<sup>16</sup> | 65,536 || 16-bit word, unsigned short, char
+2<sup>20</sup> | 1,048,576 | ```1MB```
+2<sup>30</sup> | 1,073,741,824 | ```1GB```
+2<sup>31</sup> | 2,147,483,648 || 32-bit word, signed int
+2<sup>32</sup> | 4,294,967,296 || 32-bit word, unsigned int, float
+2<sup>40</sup> | 1,099,511,627,776 | ```1TB```
+2<sup>63</sup> | 9,223,372,036,854,775,808 || 64-bit word, signed long
+2<sup>64</sup> | 18,446,744,073,709,551,616 || 64-bit word, unsigned long, double
 
 See also:
 - [Common integral data types](https://en.wikipedia.org/wiki/Integer_(computer_science)#Common_integral_data_types)
